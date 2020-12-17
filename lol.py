@@ -1,10 +1,23 @@
 from kivy.base import runTouchApp
 from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
 
-runTouchApp(Builder.load_string('''
+Builder.load_string("""
 
-StackLayout: 
+<BoxLayout>:
+    orientation: 'vertical'
     Button: 
-        text:'S1'                           
+        text:'B1'
+    Button: 
+        text:'B1'      
+    Button: 
+        text:'B1'                           
 
-'''))
+""")
+
+class MyList(BoxLayout):
+    pass
+
+if __name__ == '__main__':
+    runTouchApp(MyList())
