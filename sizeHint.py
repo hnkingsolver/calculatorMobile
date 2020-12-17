@@ -2,14 +2,9 @@ from kivy.lang import Builder
 from kivy.base import runTouchApp
 
 runTouchApp(Builder.load_string("""
-BoxLayout:
+FloatLayout:
     Button:
         text: 'B1'
-        size_hint_x: 0.5
-    Button:
-        text: 'B1'
-        size_hint_x: 1       
-    Button:
-        text: 'B1'
-        size_hint_x: 0.5                            
+        size_hint: 0.2, 0.1
+        post_hint: {'down':1, 'lift':1}
 """))
